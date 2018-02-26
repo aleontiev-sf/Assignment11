@@ -3,11 +3,11 @@
 
 This solution provides a web-based dashboard of Mars-related news and information,
 by scarping the following:
-. NASA Mars News Site at https://mars.nasa.gov/news/
-. JPL Mars Space Images (Featured Image) at https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
-. Mars Weather twitter account at https://twitter.com/marswxreport?lang=en
-. Mars Facts webpage at http://space-facts.com/mars/
-. USGS Astrogeology site (high resolution images of Mar's hemispheres) at https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars
+* NASA Mars News Site at https://mars.nasa.gov/news/
+* JPL Mars Space Images (Featured Image) at https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars
+* Mars Weather twitter account at https://twitter.com/marswxreport?lang=en
+* Mars Facts webpage at http://space-facts.com/mars/
+* USGS Astrogeology site (high resolution images of Mar's hemispheres) at https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars
 
 Upon running mars_app.py (Python script) the dashboard can be accessed at http://localhost:5000/.
 
