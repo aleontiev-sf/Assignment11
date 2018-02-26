@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Mars Dashboard</title>
+  </head>
+  <body>
+    <div class="jumbotron" style="max_width: 90%; margin: 1%">
+        <h1 style="text-align: center;">Mission to Mars</h1>
+        <a class="btn btn-primary" href="http://localhost:5000/scrape" role="button">
+           Scrape New Data</a>
+    </div>
+    <div class="container" style="margin: 1%">
+        <h1>Latest Mars News</h1>
+        <h3 class="lead">{{ news_title }}</h3>
+        <p>{{ news_p }} 
+          <a href="{{ news_url }}" target="_blank">Full Story...</a>
+        </p>
+    </div>
+   <div class="row" style="margin: 1%;">
+    <div class="col-md-8">
+        <h1>Featured Mars Image</h1>
+        <image src="{{ featured_image_url }}" width=100%
+          alt="featured image url"></image>
+    </div>
+    <div class="col-md-4">
+        <div class="solid">
+            <h2>Current Weather on Mars</h2>
+            <br>
+            <p>{{ mars_weather }}</p>
+        </div>
+        <h2>Mars Facts</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for k, v in facts.items() %}
+                <tr>
+                <td>{{ k }}</td>
+                <td>{{ v }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+    </div>
+   </div>
+  <br>
+  <div class="container" display=block>
+    <h1 style="text-align: center;">Mars Hemispheres</h1>
+    <hr>
+  </div>
+  <div class="container" style="max_width: 90%; margin: auto;">
+    <section style="float: left;">
+      <figure>
+        <img src="{{ image1.img_url }}"
+           alt="{{ image1.title }}" height=500 width=500 >
+        <figcaption>{{ image1.title}}</figcaption>
+      </figure>
+    </section>
+    <section style="float: right; left-padding:1%;">
+      <figure>
+        <img src="{{ image2.img_url }}"
+          alt="{{ image2.title }}" height=500 width=500 >
+        <figcaption>{{ image2.title }}</figcaption>
+      </figure>
+    </section>
+  </div>
+  <br>
+  <div class="container" style="max_width: 90%; margin: auto;">
+        <section style="float: left;">
+          <figure>
+            <img src="{{ image3.img_url }}"
+               alt="{{ image3.title }}" height=500 width=500 >
+            <figcaption>{{ image3.title }}</figcaption>
+          </figure>    
+        </section>
+        <section style="float: right; left-padding:1%;">
+          <figure>
+            <img src="{{ image4.img_url }}"
+               alt="{{ image4.title }}" height=500 width=500 >
+            <figcaption>{{ image4.title }}</figcaption>
+          </figure>
+        </section>
+  </div>   
+ </body>
+</html>
